@@ -11,7 +11,7 @@
 /* Fix for slick-carousel font loading warning */
 @font-face {
   font-family: 'slick';
-  src: url('./node_modules/slick-carousel/slick/fonts/slick.woff') format('woff');
+  src: url('../node_modules/slick-carousel/slick/fonts/slick.woff') format('woff');
   font-display: swap;
 }
 
