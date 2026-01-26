@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LayoutMain from "./layouts/LayoutMain";
-import Dashboard from "./Pages/Dashboard";
-import LoginPage from "./Pages/LoginPage";
+import Dashboard from "./pages/Dashboard";
+import LoginPage from "./pages/LoginPage";
 import { Toaster } from "react-hot-toast";
-import RegisterPage from "./Pages/RegisterPage";
+import RegisterPage from "./pages/RegisterPage";
 // import MenuPage from "./pages/MenuPage";
 import CategoryFood from "./pages/CategoryFood";
 import FoodDrinks from "./pages/FoodDrinks";
