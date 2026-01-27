@@ -10,12 +10,12 @@ export default function SideCart() {
   return (
     <div className="fixed inset-0 top-0 left-0 bg-black/50 z-50 flex justify-end w-full h-full  " onClick={closeCart}>
       <div 
-        className="w-[500px] h-full bg-white text-black shadow-2xl flex flex-col p-6 animate-slide-in-right relative" 
+        className="w-full sm:w-[400px] md:w-[450px] lg:w-[500px] h-full bg-white text-black shadow-2xl flex flex-col p-4 sm:p-6 animate-slide-in-right relative" 
         onClick={(event) => event.stopPropagation()}
       >
         {/* Header */}
         <div className="flex justify-between items-center border-b border-gray-100 pb-4 mb-4">
-          <h1 className='text-2xl font-bold text-gray-800'>My Cart <span className="text-sm font-normal text-gray-500">({items.length})</span></h1>
+          <h1 className='text-xl sm:text-2xl font-bold text-gray-800'>My Cart <span className="text-xs sm:text-sm font-normal text-gray-500">({items.length})</span></h1>
           <button onClick={closeCart} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
              <IoIosCloseCircleOutline className='text-3xl text-gray-500 hover:text-red-500 transition-colors' />
           </button>
@@ -63,7 +63,7 @@ export default function SideCart() {
                </div>
                
                {/* Checkout Button */}
-               <button className="w-full py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-orange-100 active:scale-95 transform duration-150 mt-2">
+                <button className="w-full py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-orange-100 active:scale-95 transform duration-150 mt-2">
                  Checkout
                </button>
              </div>

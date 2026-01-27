@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LayoutMain from "./layouts/LayoutMain";
-import Dashboard from "./pages/Dashboard";
-import LoginPage from "./pages/LoginPage";
+import Dashboard from "./Pages/Dashboard";
+import LoginPage from "./Pages/LoginPage";
 import { Toaster } from "react-hot-toast";
-import RegisterPage from "./pages/RegisterPage";
+import RegisterPage from "./Pages/RegisterPage";
 // import MenuPage from "./pages/MenuPage";
-import CategoryFood from "./pages/CategoryFood";
-import FoodDrinks from "./pages/FoodDrinks";
+import CategoryFood from "./Pages/CategoryFood";
+import FoodDrinks from "./Pages/FoodDrinks";
 import SideCart from "./components/SideCart";
 import { cartIndex } from "../store";
 import ProductDetails from "./ProductDetails";

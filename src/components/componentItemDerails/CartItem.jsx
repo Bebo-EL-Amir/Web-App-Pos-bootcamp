@@ -15,27 +15,25 @@ export default function CartItem({ product }) {
 
   return (
     <div className="flex w-full gap-2 items-center">
-      <div className="flex justify-center items-center h-[100px] w-[100px] border shadow-sm rounded-xl overflow-hidden bg-gray-50">
+      <div className="flex justify-center items-center h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] border shadow-sm rounded-xl overflow-hidden bg-gray-50 flex-shrink-0">
         <img className="w-full h-full object-cover" src={fullImageUrl} alt={product.name} />
       </div>
-      <div className="flex w-[431px] h-[88px] justify-between">
-        <div className="flex flex-col gap-2">
-          <h1 className="w-[200px] font-semibold text-[16px] leading-[24px] tracking-normal">{product.name}</h1>
-          <h1 className="font-semibold text-[14px] leading-[24px] tracking-normal">Total : $ {product.qty * (product.discountPrice ? product.discountPrice : product.originalPrice)} </h1>
+      <div className="flex flex-1 justify-between items-center gap-2">
+        <div className="flex flex-col gap-1 min-w-0">
+          <h1 className="font-semibold text-sm sm:text-base leading-tight truncate max-w-[120px] sm:max-w-[200px]">{product.name}</h1>
+          <h1 className="font-semibold text-xs sm:text-sm text-gray-500">Unit: ${product.discountPrice ? product.discountPrice : product.originalPrice}</h1>
+          <h1 className="font-bold text-sm sm:text-base text-gray-800">Total: ${product.qty * (product.discountPrice ? product.discountPrice : product.originalPrice)}</h1>
         </div>
-        <div className="flex flex-col w-[110px] h-[88px] gap-[24px]">
-          <div className="flex justify-center items-center gap-10">
-            <h1>${product.discountPrice ? product.discountPrice : product.originalPrice}</h1>
-            <IoMdClose onClick={() => removeFromCart(product.documentId)} className="cursor-pointer" />
+        <div className="flex flex-col items-end gap-2 shrink-0">
+          <div className="flex items-center gap-2">
+            <IoMdClose onClick={() => removeFromCart(product.documentId)} className="cursor-pointer text-gray-400 hover:text-red-500 transition-colors text-lg" />
           </div>
-          <div className="flex items-center rounded-md overflow-hidden">
-            <button className="px-3 py-1 hover:bg-gray-100 cursor-pointer" onClick={() => decrmentQty(product.documentId)}>
+          <div className="flex items-center border rounded-lg overflow-hidden bg-white shadow-sm">
+            <button className="px-2 sm:px-3 py-1 hover:bg-gray-50 cursor-pointer text-gray-600 font-bold transition-colors" onClick={() => decrmentQty(product.documentId)}>
               −
             </button>
-
-            <div className="px-4 select-none">{product.qty}</div>
-
-            <button className="px-3 py-1 hover:bg-gray-100 cursor-pointer" onClick={() => incrmentQty(product.documentId)}>
+            <div className="px-2 sm:px-3 text-sm sm:text-base font-semibold select-none min-w-[30px] text-center border-x">{product.qty}</div>
+            <button className="px-2 sm:px-3 py-1 hover:bg-gray-50 cursor-pointer text-gray-600 font-bold transition-colors" onClick={() => incrmentQty(product.documentId)}>
               +
             </button>
           </div>
