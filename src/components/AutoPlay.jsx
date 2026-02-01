@@ -5,6 +5,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Import images
+import img1 from '../assets/11111.jpg';
+import img2 from '../assets/222222.jpg';
+import img3 from '../assets/33333.jpg';
+
 function AutoPlay() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -56,9 +61,9 @@ function AutoPlay() {
 
       <Slider {...settings}>
         {[
-          "/src/assets/11111.jpg",
-          "/src/assets/222222.jpg",
-          "/src/assets/33333.jpg"
+          img1,
+          img2,
+          img3
         ].map((src, index) => (
           <div key={index} className="outline-none px-1 flex justify-center items-center w-full h-full">
             <img 
