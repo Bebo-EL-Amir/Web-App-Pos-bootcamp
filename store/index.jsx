@@ -89,4 +89,9 @@ export const useCart = create((set) => ({
 
       return { total: finalTotal };
     }),
+
+  clearCart: () =>
+    set(() => {
+      return { items: [], total: 0 };
+    }),
 }));

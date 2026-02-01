@@ -45,7 +45,7 @@ export default function Dashboard() {
           </div>
             </div>
 
-               <div className="w-[400px] h-[120px]  border border-gray-100 rounded-2xl shadow-sm  bg-white flex ">
+               <div className="lg:w-[400px] lg:h-[120px] w-full h-[120px] border border-gray-100 rounded-2xl shadow-sm  bg-white flex ">
           <div className="p-2 "> <LuUserRoundPlus className="text-[22px] text-white bg-yellow  rounded-[5px]"/>
           </div> 
           <div className="pt-1 ">
@@ -64,7 +64,7 @@ export default function Dashboard() {
         <div className=" grid lg:grid-cols-2 lg:gap-[623px] ">
 
 
-              <div className="w-[600px]   p-3 border border-gray-100 rounded-2xl shadow-sm  bg-white flex flex-col">
+              <div className="lg:w-[600px] w-full   p-3 border border-gray-100 rounded-2xl shadow-sm  bg-white flex flex-col">
                 <div className="flex justify-between w-full">
 
                    <h1 className="text-[18px] font-bold">Trending Dishes</h1>
@@ -158,7 +158,7 @@ export default function Dashboard() {
 
 
                 
-             <div className="w-[600px]  p-3 border border-gray-100 rounded-2xl shadow-sm  bg-white flex flex-col">
+             <div className="lg:w-[600px] w-full  p-3 border border-gray-100 rounded-2xl shadow-sm  bg-white flex flex-col">
                 <div className="flex justify-between w-full">
 
                    <h1 className="text-[18px] font-bold">Best Employess</h1>

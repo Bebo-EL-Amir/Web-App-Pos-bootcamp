@@ -2,10 +2,20 @@ import React from 'react';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import CartItem from './componentItemDerails/CartItem';
 import { cartIndex, useCart } from '../../store';
+import toast from 'react-hot-toast';
 
 export default function SideCart() {
   const { closeCart } = cartIndex();
-  const { items } = useCart();
+  const { items, clearCart } = useCart();
+
+  const handleCheckout = () => {
+    toast.success('Order placed successfully!', {
+      duration: 3000,
+      icon: '✅',
+    });
+    clearCart();
+    closeCart();
+  };
 
   return (
     <div className="fixed inset-0 top-0 left-0 bg-black/50 z-50 flex justify-end w-full h-full  " onClick={closeCart}>
@@ -63,7 +73,10 @@ export default function SideCart() {
                </div>
                
                {/* Checkout Button */}
-                <button className="w-full py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-orange-100 active:scale-95 transform duration-150 mt-2">
+                <button 
+                  onClick={handleCheckout}
+                  className="w-full py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-orange-100 active:scale-95 transform duration-150 mt-2"
+                >
                  Checkout
                </button>
              </div>

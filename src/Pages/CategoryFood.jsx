@@ -38,16 +38,16 @@ export default function MenuPage() {
   }, [params.catId]);
 
   return (
-    <div className="w-full h-full overflow-auto bg-white ">
+    <div className="w-full h-full  overflow-auto bg-white ">
       {/* product-card max-w-full w-72  md:w-80 hover:-translate-y-2 ease-in-out duration-1000 cursor-pointer flex flex-col */}
-      <div className="flex items-center gap-4 mb-8 pl-5 pt-4">
+      <div className="flex items-center  gap-4 mb-8 pl-5 pt-4">
          <Link to={`/FoodDrinks`} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
           <IoMdArrowRoundBack className="text-[22px] text-gray-700" />
         </Link>
 
         <h1 className=" text-3xl font-extrabold text-gray-800   pl-2">{categories?.name}</h1>
       </div>
-      <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 p-4 gap-4 ">
+      <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-5 p-4 gap-4 ">
         {items?.map((el) => {
           let imageUrl = el.img?.url;
           if (imageUrl && typeof imageUrl === 'string') {
